@@ -18,3 +18,6 @@ refs.range.addEventListener(
   (evt) => (refs.text.style.fontSize = `${evt.currentTarget.value}px`)
 );
 refs.text.style.fontSize = `${refs.range.value}px`;
+
+
+
