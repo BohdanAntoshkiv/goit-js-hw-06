@@ -8,15 +8,13 @@
 // <br />
 // <span id="text">Abracadabra!</span>
 
-
 const refs = {
-    range: document.querySelector("#font-size-control"),
-    text: document.querySelector("#text"),
+  range: document.querySelector("#font-size-control"),
+  text: document.querySelector("#text"),
 };
 
-refs.range.addEventListener("input", fontSizeChange);
-
-function fontSizeChange() {
-    const selectedOptionValue = refs.range.value;
-    refs.text.style.fontSize = `${selectedOptionValue}px`;
-}
+refs.range.addEventListener(
+  "input",
+  (evt) => (refs.text.style.fontSize = `${evt.currentTarget.value}px`)
+);
+refs.text.style.fontSize = `${refs.range.value}px`;
